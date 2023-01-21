@@ -47,7 +47,8 @@ if (isset($_POST['type']) && isset($_POST['email'])) {
   }
   $email_message .= "Name: " . clean_string($name) . "\n";
   $email_message .= "Email: " . clean_string($email) . "\n";
-  
+  header("Location: ".$redirectUrl);
+  die();
   // create email headers
   $headers = 'From: ' . $email . "\r\n" .
     'Reply-To: ' . $email . "\r\n" .
